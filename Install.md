@@ -78,13 +78,6 @@ echo '<agent_config>
 </agent_config>' > app_jellyfin/agent.conf
 
 echo '<agent_config>
-  <active-response>
-    <disabled>no</disabled>
-    <repeated_offenders>185,1500</repeated_offenders>
-  </active-response>
-</agent_config>' > net_wan/agent.conf
-
-echo '<agent_config>
   <localfile>
     <location>/var/log/messages</location>
     <log_format>syslog</log_format>
