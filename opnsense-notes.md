@@ -10,10 +10,11 @@ root@light:/usr/local/opnsense/service/conf/actions.d # cat /usr/local/opnsense/
 cat: /usr/local/opnsense/service/conf/actions.d: Is a directory
 root@light:/usr/local/opnsense/service/conf/actions.d # cat /usr/local/opnsense/service/conf/actions.d/actions_wazuh_agent_custom.conf
 [start]
-command:
-    /bin/cp -af /var/ossec/active-response/bin/opnsense-fw /var/ossec/active-response/bin/firewall-drop
+command:/bin/cp -af /var/ossec/active-response/bin/opnsense-fw /var/ossec/active-response/bin/firewall-drop
+parameters:
 type:script
-message:wazuh link firewall-drop to opnsense-fw
+message:Custom wazuh link firewall-drop to opnsense-fw
+description:Custom wazuh link firewall-drop to opnsense-fw
 root@light:/usr/local/opnsense/service/conf/actions.d # service configd restart
 Stopping configd...done
 Starting configd.
